@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Message Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #1ebe5d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Send WhatsApp Message</h2>
+        <input type="tel" id="phone" placeholder="Enter 10-digit number" maxlength="10" pattern="[0-9]{10}">
+        <button onclick="sendMessage()">Send Message</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let phone = document.getElementById("phone").value.trim();
+            if (phone.length === 10 && !isNaN(phone)) {
+                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
+                window.location.href = `https://wa.me/91${phone}?text=${message}`;
+            } else {
+                alert("Please enter a valid 10-digit number.");
+            }
+        }
+    </script>
+</body>
+</html>
