@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Message Sender</title>
+    <title>WhatsApp Invoice Sender</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,17 +44,17 @@
 </head>
 <body>
     <div class="container">
-        <h2>Send WhatsApp Message</h2>
+        <h2>Send WhatsApp Invoice</h2>
         <input type="tel" id="phone" placeholder="Enter 10-digit number" maxlength="10" pattern="[0-9]{10}">
-        <button onclick="sendMessage()">Send Message</button>
+        <button onclick="sendMessage()">Send Message</b
     </div>
 
     <script>
         function sendMessage() {
             let phone = document.getElementById("phone").value.trim();
             if (phone.length === 10 && !isNaN(phone)) {
-                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
-                window.location.href = `https://web.whatsapp.com/91${phone}?text=${message}`;
+                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?"");
+                window.location.href = `https://web.whatsapp.com/send?phone=91${phone}&text=${message}`;
             } else {
                 alert("Please enter a valid 10-digit number.");
             }
