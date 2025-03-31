@@ -54,7 +54,7 @@
             let phone = document.getElementById("phone").value.trim();
             if (phone.length === 10 && !isNaN(phone)) {
                 let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
-                window.location.href = `https://wa.me/91${phone}?text=${message}`;
+                window.location.href = `https://web.whatsapp.com/91${phone}?text=${message}`;
             } else {
                 alert("Please enter a valid 10-digit number.");
             }
