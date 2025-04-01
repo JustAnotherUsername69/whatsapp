@@ -56,8 +56,8 @@
                 let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
                 let whatsappUrl = `https://web.whatsapp.com/send?phone=91${phone}&text=${message}`;
 
-                // Open in a new tab (fixes some browser security issues)
-                window.open(whatsappUrl, "_blank");
+                // Open the link in the same tab
+                window.location.href = whatsappUrl;
             } else {
                 alert("Please enter a valid 10-digit number.");
             }
