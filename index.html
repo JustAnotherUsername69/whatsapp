@@ -53,7 +53,7 @@
         document.getElementById("sendButton").addEventListener("click", function() {
             let phone = document.getElementById("phone").value.trim();
             if (phone.length === 10 && !isNaN(phone)) {
-                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?"");
+                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
                 let whatsappUrl = `https://web.whatsapp.com/send?phone=91${phone}&text=${message}`;
 
                 // Open in a new tab (fixes some browser security issues)
