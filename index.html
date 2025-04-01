@@ -53,7 +53,16 @@
         document.getElementById("sendButton").addEventListener("click", function() {
             let phone = document.getElementById("phone").value.trim();
             if (phone.length === 10 && !isNaN(phone)) {
-                let message = encodeURIComponent("Hello, Welcome to Akshay Electronics! How can we help you?");
+                let message = encodeURIComponent(`कूलर
+फ्रिज
+वॉशिंग मशिन 
+टीव्ही 
+मोबाईल
+इतर सर्व गृह उपयोगी वस्तू झिरो डाऊन पेमेंट वर व कमीत कमी EMI वर 
+आजच खरेदी करा
+अक्षय इलेक्ट्रॉनिक्स अँड मोबाईल्स 
+चित्तेगाव, 7620307070, 9595553753`);
+
                 let whatsappUrl = `https://web.whatsapp.com/send?phone=91${phone}&text=${message}`;
 
                 // Open the link in the same tab
